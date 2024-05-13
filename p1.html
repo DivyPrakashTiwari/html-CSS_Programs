@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>technical training</title>
+    <script>
+        function disp() 
+        {
+            var regd = document.getElementById("user").value;
+            document.write("<h1 style='color:red'> welocme"+ name +"</h1>");
+            var n=parseInt(document.getElementById("num").value);
+            if(n%2==0)
+            {
+                document.write("<h1 style='color:blue'> even"+ n +"</h1>");
+            }
+            else
+            {
+                document.write("<h1 style='color:red'> odd"+ n +"</h1>");
+            }
+            var t=parseInt(document.getElementById("table").value);
+            for(i=1;i<=10;i++)
+            {
+                // document.write(t+"*"+i+"="+(t*i));
+                document.write(`${t} * ${i} = ${"ye"}${t*i}`);
+                document.write("<br/>");
+            }
+        }
+        function add()
+        {
+            var a=parseInt(document.getElementById("f").value);
+            var b=parseInt(document.getElementById("s").value);
+            var res=a+b;
+            document.getElementById("r").value=res;
+        }
+    </script>
+    
+</head>
+<body>
+    <script>
+        var name=prompt('ennter your name:')
+        alert("welcome to technical training"+name);
+    </script>
+    Enter regd : <input type="text" id="user"/>
+    <button onclick="disp()"> Display regd</button><br/>
+    Enter n : <input type="text" id="num"/>
+    <button onclick="disp()"> Display n</button><br/>
+    Enter t : <input type="text" id="table"/>
+    <button onclick="disp()"> Display table</button><br/>
+    <label>Input:</label>
+    <input type="text" id="f"/>
+    <label>+</label>
+    <input type="text" id="s"/>
+    <label>=</label>
+    <input type="text" id="r"/>
+    <button onclick="add()"> Add</button><br/>
+</body>
+</html>

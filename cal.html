@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function add() 
+        {
+                    var x = parseInt(document.getElementById("f").value);
+                    var y = parseInt(document.getElementById("s").value);
+                    var z = x+y;
+                    document.getElementById("r").innerText = z;
+                }
+        function sub() 
+        {
+            var x = parseInt(document.getElementById("f").value);
+                    var y = parseInt(document.getElementById("s").value);
+                    var z = x-y;
+                    document.getElementById("r").innerText = z;
+                }
+        function mul() 
+        {
+            var x = parseInt(document.getElementById("f").value);
+                    var y = parseInt(document.getElementById("s").value);
+                    var z = x*y;
+                    document.getElementById("r").innerText = z;
+                }
+        function div() 
+        {
+            var x = parseInt(document.getElementById("f").value);
+                    var y = parseInt(document.getElementById("s").value);
+                    var z = x/y;
+                    document.getElementById("r").innerText = z;
+                }
+    </script>
+    <style>
+        #t1{
+            width: 120px;
+            height: 20px;
+            background-color: aquamarine;
+        }
+        /* id selection */
+        #t2{
+            width: 90px;
+            height: 20px;
+            background-color: #f015e9;
+        }
+        .l{
+            width: 90px;
+            height: 20px;
+            background-color: rgb(255, 249, 127);
+        }
+        tr{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" align="center">
+        <caption style="background-color: cadetblue; color: #f01515;">Calculator</caption>
+        <tr>
+            <td id="t1">First Num:</td>
+            <td id="t2"><input type="text" id="f"></td>
+        </tr>
+        <tr>
+            <td id="t1">Second Num:</td>
+            <td id="t2"><input type="text" id="s"></td>
+        </tr>
+        <tr>
+            <td id="t1">Result:</td>
+            <td id="t2"><p id="r"></p></td>
+        </tr>
+        <tr>
+            <td class="l" align="center">
+                <button onclick="add()">ADD</button>
+                <button onclick="sub()">SUB</button>
+            </td>
+            <td align="center" class="l">
+                <button onclick="mul()">MUL</button>
+                <button onclick="div()">DIV</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
